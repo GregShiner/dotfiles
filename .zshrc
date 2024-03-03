@@ -31,6 +31,8 @@ alias update="sudo pacman -Sy archlinux-keyring && sudo pacman -Su"
 alias psussh="ssh grs5424@lxcluster.tlt.psu.edu"
 alias typeclip="xclip -selection clipboard -out | xdotool selectwindow windowfocus type --clearmodifiers --delay 25 --window %@ --file -"
 alias tmuxs="~/.config/tmux/scripts/tmux-sessionizer.sh"
+alias vpnup="sudo wg-quick up wg0"
+alias vpndown="sudo wg-quick down wg0"
 # PATH
 export PATH=$PATH:/home/greg/.local/bin
 # Azure function core tools
