@@ -24,6 +24,12 @@ autoload -Uz promptinit
 promptinit
 prompt redhat
 
+# source antidote
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
+
 # Aliases
 alias la="ls -la"
 alias restart="shutdown -r now"
