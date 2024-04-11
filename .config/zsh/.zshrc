@@ -74,3 +74,4 @@ eval $(opam env)
 
 # Start zoxide
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
