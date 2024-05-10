@@ -40,6 +40,7 @@ alias tmuxs="~/.config/tmux/scripts/tmux-sessionizer.sh"
 alias vpnup="sudo wg-quick up wg0"
 alias vpndown="sudo wg-quick down wg0"
 alias yadml="lazygit -ucd .local/share/yadm/lazygit -w ~ -g .local/share/yadm/repo.git"
+alias hyprshit="hyprshot"
 # PATH
 export PATH=$PATH:/home/greg/.local/bin
 # Azure function core tools
