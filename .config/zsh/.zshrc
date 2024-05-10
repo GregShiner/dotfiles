@@ -55,7 +55,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 eval $(thefuck --alias)
 
 alias -g trash=~/.local/share/Trash/files/
-alias -g zshrc=~/.zshrc
+alias -g zshrc=$ZDOTDIR/.zshrc
+alias -g zshconf=$ZDOTDIR
 alias -g initlua=~/.config/nvim/init.lua
 alias -g nvimconf=~/.config/nvim/
 alias -g tmuxconf=~/.config/tmux/tmux.conf
@@ -67,7 +68,7 @@ function trash {
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 # Get opam environment
 eval $(opam env)
