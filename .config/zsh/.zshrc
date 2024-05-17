@@ -25,7 +25,12 @@ promptinit
 prompt redhat
 
 # source antidote
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+FILE=${ZDOTDIR:-~}/.antidote/antidote.zsh
+if [[ -f "$FILE" ]]; then
+  source $FILE
+else
+  source /usr/share/zsh-antidote/antidote.zsh
+fi
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
@@ -66,7 +71,7 @@ function trash {
     mv "$1" trash
 }
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
