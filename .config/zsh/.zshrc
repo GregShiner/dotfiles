@@ -46,8 +46,11 @@ alias vpnup="sudo wg-quick up wg0"
 alias vpndown="sudo wg-quick down wg0"
 alias yadml="lazygit -ucd .local/share/yadm/lazygit -w ~ -g .local/share/yadm/repo.git"
 alias hyprshit="hyprshot"
+alias set_kbd="brightnessctl -d platform::kbd_backlight s"
 # PATH
 export PATH=$PATH:/home/greg/.local/bin
+# FPATH for zsh functions
+export FPATH=$FPATH:$ZDOTDIR/completions/
 # Azure function core tools
 export PATH=$PATH:/home/greg/azure-functions-cli
 
@@ -71,10 +74,7 @@ function trash {
     mv "$1" trash
 }
 
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
 # Get opam environment
 eval $(opam env)
