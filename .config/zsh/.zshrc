@@ -74,6 +74,8 @@ function trash {
     mv "$1" trash
 }
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
 # Get opam environment
