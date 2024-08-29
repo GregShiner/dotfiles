@@ -47,6 +47,7 @@ alias vpndown="sudo wg-quick down wg0"
 alias yadml="lazygit -ucd .local/share/yadm/lazygit -w ~ -g .local/share/yadm/repo.git"
 alias hyprshit="hyprshot"
 alias set_kbd="brightnessctl -d platform::kbd_backlight s"
+alias info="info --vi-keys"
 # PATH
 export PATH=$PATH:/home/greg/.local/bin
 # FPATH for zsh functions
