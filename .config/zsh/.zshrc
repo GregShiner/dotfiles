@@ -14,12 +14,23 @@ setopt share_history
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
+
+# Added by me because these need to be before compinit
+# https://unix.stackexchange.com/a/157773
+setopt AUTO_PUSHD                  # pushes the old directory onto the stack
+setopt PUSHD_MINUS                 # exchange the meanings of '+' and '-'
+setopt CDABLE_VARS                 # expand the expression (allows 'cd -2/tmp')
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/greg/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# Continued from https://unix.stackexchange.com/a/157773 since this needs to be after compinit
+zstyle ':completion:*:directory-stack' list-colors '=(#b) #([0-9]#)*( *)==95=38;5;12'
+
 autoload -Uz promptinit
 promptinit
 prompt redhat
